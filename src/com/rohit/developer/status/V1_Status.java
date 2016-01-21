@@ -4,16 +4,16 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 
-@Path("/v1/status")
+@Path("/v1/status/")
 public class V1_Status {
 	
-	private static final String api_version="00.01.00";
-	
+	private static final String api_version= "00.01.00";
+
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public String returnTitle()
 	{
-		return "<p>Java Web Service</p>";
+		return "<p> Java WebService</p>";
 	}
 	
 	@Path("/version")
@@ -21,7 +21,8 @@ public class V1_Status {
 	@Produces(MediaType.TEXT_HTML)
 	public String returnVersion()
 	{
-		return "Version:"+api_version;
+		return "<p>Version:</p>" +api_version;
 	}
+	
 
 }
